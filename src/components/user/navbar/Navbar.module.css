@@ -1,0 +1,42 @@
+.navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .navbarContainer {
+      display: flex;
+      flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+    gap: 1rem;
+  }
+}
+.logo {
+  font-size: 60px; 
+  font-family: "Meie Script", cursive; 
+  font-weight: 400; 
+  text-decoration: none;
+  color: rgb(188,76,42); 
+  
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbarSupportedContent {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  
+}
+.show {
+  transform: translateY(0);
+}
+
+.hide {
+  transform: translateY(-100%);
+}
