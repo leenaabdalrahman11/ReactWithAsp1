@@ -7,6 +7,7 @@ export default function Collection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState("All Products");
   const baseUrl = import.meta.env.VITE_API_URL;
+  console.log(baseUrl);
 
   const { categories } = useCategories(baseUrl);
   const { products, loading } = useProducts(baseUrl, activeCategory);
@@ -26,7 +27,6 @@ export default function Collection() {
 
   return (
     <div className="p-6 flex flex-col lg:flex-row gap-6 lg:gap-20 justify-center min-h-screen">
-      {/* Sidebar Categories */}
       <div className="flex gap-4 flex-col w-full lg:w-[20%] bg-transparent">
         <div className="border-b-2 border-gray-500 pb-2">
           <h1 className="text-mainColor-500 text-lg md:text-xl lg:text-2xl font-thin">

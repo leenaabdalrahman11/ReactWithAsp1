@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import BestSellerCard from "./BestSellerCard";
+import { Link } from "react-router-dom";
 
 export default function BestSellers() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const baseUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     fetch(
-      "http://leena12.runasp.net/api/Products?lang=en&limit=10&sortBy=price&asc=true",
+      `${baseUrl}/api/Products?lang=en&limit=10&sortBy=price&asc=true`,
     )
       .then((res) => res.json())
       .then((data) => {
@@ -18,7 +20,7 @@ export default function BestSellers() {
   console.log(products);
   if (loading) return <p>Loading...</p>;
   const chunks = [];
-  const doubled = [...products, ...products];
+  const doubled = [...products];
 
   for (let i = 0; i < products.length; i += 4) {
     chunks.push(doubled.slice(i, i + 4));
@@ -89,6 +91,16 @@ export default function BestSellers() {
             style={{ filter: "brightness(0)" }}
           ></span>
         </button>
+      </div>
+            <div className="p-6 container h-[10vh] flex items-center justify-center">
+        <Link to="/products">
+          <button
+            className="text-[#bc4c2a] text-lg border-[#bc4c2a] border-1 hover:bg-[#bc4c2a]
+             hover:text-white transition-colors py-2 px-8"
+          >
+            Shop All Bags
+          </button>
+        </Link>
       </div>
     </div>
   );

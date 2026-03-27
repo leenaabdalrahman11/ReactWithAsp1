@@ -32,7 +32,7 @@ export default function Navbar() {
           >
             <div className={` w-[100%] flex justify-content-center ${style.logo} `}>
               <Link className={`${style.logo}`} to="/">
-                adalene.
+                DevHub.
               </Link>
             </div>
 
