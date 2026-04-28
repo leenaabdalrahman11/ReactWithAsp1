@@ -1,0 +1,23 @@
+.homeContainer{
+    height: 20vh;
+    background-image: url('./images/HomePage.avif');
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  animation: fadeIn 1s ease forwards;
+}
+
+.button {
+  animation: fadeIn 1s ease 0.5s forwards;
+  opacity: 0;
+}
