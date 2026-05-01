@@ -73,12 +73,6 @@ export default function PaymentSuccess() {
             Back to Home
           </button>
 
-          <button
-            onClick={() => navigate("/orders")}
-            className="rounded-xl border border-gray-300 px-6 py-3 text-gray-700 hover:bg-gray-50"
-          >
-            View Orders
-          </button>
         </div>
       </div>
     </div>

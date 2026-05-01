@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
   const [openIndex, setOpenIndex] = useState(null);
   const [showMessage, setShowMessage] = useState(false);
-
+const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -39,18 +39,27 @@ export default function ProductDetails() {
       });
   }, [id]);
 
-  const handleAddToCart = async () => {
-    try {
-      await addToCart(baseUrl, id, quantity);
-      setShowMessage(true);
+const handleAddToCart = async () => {
+  try {
+    await addToCart(baseUrl, id, quantity);
 
-      setTimeout(() => {
-        navigate("/cart");
-      }, 2000);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    setMessage("Added to cart successfully!");
+    setShowMessage(true);
+
+    setTimeout(() => {
+      navigate("/cart");
+    }, 2000);
+  } catch (error) {
+    setMessage(error.message || "You must log in first");
+    setShowMessage(true);
+
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 2000);
+
+    console.error(error);
+  }
+};
 
   return (
     <>

@@ -3,6 +3,10 @@ import React from 'react'
 export async function addToCart(baseUrl, productId, count = 1) {
   const token = localStorage.getItem("token");
 
+  if (!token) {
+    throw new Error("You must log in first");
+  }
+
   const response = await fetch(`${baseUrl}/api/Cart`, {
     method: "POST",
     headers: {
