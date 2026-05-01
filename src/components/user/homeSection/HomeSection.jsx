@@ -1,6 +1,6 @@
 import React from "react";
 import homeSectionImg from "../../../assets/images/homwSection.jpg";
-import bagHomeSection from "../../../assets/images/bagHomeSection.jpg";
+import bagHomeSection from "../../../assets/images/BagHomeSection.jpg";
 
 export default function HomeSection() {
   return (
