@@ -205,9 +205,9 @@ const handleAddToCart = async () => {
                           : "max-h-0 opacity-0 -translate-y-2"
                       }`}
                     >
-                      <div className="py-4 text-black text-sm sm:text-base">
-                        النص هنا
-                      </div>
+<div className="py-4 text-black text-sm sm:text-base">
+  This product is carefully crafted with high-quality materials to provide comfort, durability, and a stylish look for everyday use.
+</div>
                     </div>
                   </div>
 
@@ -239,9 +239,9 @@ const handleAddToCart = async () => {
                           : "max-h-0 opacity-0 -translate-y-2"
                       }`}
                     >
-                      <div className="py-4 text-black text-sm sm:text-base">
-                        النص هنا
-                      </div>
+<div className="py-4 text-black text-sm sm:text-base">
+  You can request a return or refund within 14 days of receiving your order, as long as the item is unused and in its original condition.
+</div>
                     </div>
                   </div>
 
@@ -273,9 +273,9 @@ const handleAddToCart = async () => {
                           : "max-h-0 opacity-0 -translate-y-2"
                       }`}
                     >
-                      <div className="py-4 text-black text-sm sm:text-base">
-                        النص هنا
-                      </div>
+<div className="py-4 text-black text-sm sm:text-base">
+  Orders are processed as soon as possible, and delivery time may vary depending on your location and the selected shipping method.
+</div>
                     </div>
                   </div>
                 </div>
